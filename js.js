@@ -52,6 +52,7 @@ playBtn.addEventListener("click", (ev) => {
     result = "¡Has perdido!";
   }
   console.log("Resultado:", result);
-});
 
-// SECCIÓN ACCIONES //
+  // ACCIONES //
+  messageEl.innerHTML = `${result} Tú: ${playerMove} | PC: ${computerMove}`;
+});
