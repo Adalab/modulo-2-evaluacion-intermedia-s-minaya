@@ -35,6 +35,23 @@ playBtn.addEventListener("click", (ev) => {
   }
 
   console.log("Computer choice:", computerMove);
+
+  // Comparar jugadas
+
+  let result = "";
+
+  if (playerMove === computerMove) {
+    result = "Empate";
+  } else if (
+    (playerMove === "Piedra" && computerMove === "Tijera") ||
+    (playerMove === "Papel" && computerMove === "Piedra") ||
+    (playerMove === "Tijera" && computerMove === "Papel")
+  ) {
+    result = "¡Has ganado!";
+  } else {
+    result = "¡Has perdido!";
+  }
+  console.log("Resultado:", result);
 });
 
 // SECCIÓN ACCIONES //
