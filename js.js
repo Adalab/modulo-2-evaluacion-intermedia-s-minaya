@@ -17,6 +17,7 @@ function getRandomNumber(max) {
 
 let playerPoints = 0;
 let computerPoints = 0;
+let roundsPlayed = 0;
 
 // SECCIÓN EVENTOS //
 playBtn.addEventListener("click", (ev) => {
@@ -53,9 +54,24 @@ playBtn.addEventListener("click", (ev) => {
     result = "¡Has perdido!";
     computerPoints += 1;
   }
+  roundsPlayed += 1;
 
   // ACCIONES //
   messageEl.innerHTML = `${result} Tú: ${playerMove} | PC: ${computerMove}`;
   playerScoreEl.innerHTML = `Jugador: ${playerPoints}`;
   computerScoreEl.innerHTML = `PC: ${computerPoints}`;
+
+  // Terminar juego tras 10 rondas
+
+  if (roundsPlayed === 10) {
+    playBtn.classList.add("collapsed");
+
+    if (playerPoints > computerPoints) {
+      messageEl.innerHTML = `Fin del juego: ¡Has ganado!`;
+    } else if (computerPoints > playerPoints) {
+      messageEl.innerHTML = `Fin del juego: ¡Has perdido!`;
+    } else {
+      messageEl.innerHTML = `Fin del juego: ¡Empate!`;
+    }
+  }
 });

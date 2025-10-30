@@ -73,3 +73,6 @@
   background-color: rgb(99, 219, 193);
   color: white;
 }
+.collapsed {
+  display: none;
+}
