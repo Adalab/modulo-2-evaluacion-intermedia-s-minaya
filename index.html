@@ -18,22 +18,26 @@
       <section class="game__controls">
         <p class="instruction_text">Introduce aquí tu jugada:</p>
         <div>
-          <select class="select__label" name="" id="">
+          <select
+            class="select__label js_selectEl"
+            name="player-select"
+            id="player-select"
+          >
             <option value="">Seleccione su jugada</option>
-            <option value="">Piedra</option>
-            <option value="">Papel</option>
-            <option value="">Tijera</option>
+            <option value="Piedra">Piedra</option>
+            <option value="Papel">Papel</option>
+            <option value="Tijera">Tijera</option>
           </select>
-          <button class="play__btn">Jugar</button>
+          <button class="play__btn js_playBtn">Jugar</button>
         </div>
       </section>
-      <section class="game__result">
-        <p class="game__message">Vamos a Jugar!</p>
+      <section class="game__result js_roundInfoEl">
+        <p class="game__message js_messageEl">Vamos a Jugar!</p>
       </section>
 
       <section class="game__score">
-        <p class="player__score">Jugador:</p>
-        <p class="computer__score">Computadora:</p>
+        <p class="player__score js_playerScoreEl">Jugador:</p>
+        <p class="computer__score js_computerScoreEl">Computadora:</p>
       </section>
     </main>
 
