@@ -13,16 +13,18 @@ function getRandomNumber(max) {
   return 1 + parseInt(Math.random() * max);
 }
 
+// Variables para guardar puntos
+
+let playerPoints = 0;
+let computerPoints = 0;
+
 // SECCIÓN EVENTOS //
 playBtn.addEventListener("click", (ev) => {
   const playerMove = selectEl.value;
-  console.log("Jugador elige:", playerMove);
 
   // Numero aleatorio computer
 
   const randomNumber = getRandomNumber(9);
-
-  console.log("Número aleatorio:", randomNumber);
 
   let computerMove = "";
 
@@ -33,8 +35,6 @@ playBtn.addEventListener("click", (ev) => {
   } else {
     computerMove = "Tijera";
   }
-
-  console.log("Computer choice:", computerMove);
 
   // Comparar jugadas
 
@@ -48,11 +48,14 @@ playBtn.addEventListener("click", (ev) => {
     (playerMove === "Tijera" && computerMove === "Papel")
   ) {
     result = "¡Has ganado!";
+    playerPoints += 1;
   } else {
     result = "¡Has perdido!";
+    computerPoints += 1;
   }
-  console.log("Resultado:", result);
 
   // ACCIONES //
   messageEl.innerHTML = `${result} Tú: ${playerMove} | PC: ${computerMove}`;
+  playerScoreEl.innerHTML = `Jugador: ${playerPoints}`;
+  computerScoreEl.innerHTML = `PC: ${computerPoints}`;
 });
