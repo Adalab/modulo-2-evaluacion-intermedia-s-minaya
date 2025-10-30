@@ -9,3 +9,67 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.main {
+  padding: 2rem;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 3rem;
+  color: rgb(66, 65, 65);
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1rem;
+}
+.game__controls {
+  margin-bottom: 2rem;
+}
+.game__result {
+  margin-bottom: 2rem;
+}
+.game__message {
+  border-radius: 3px;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  background-color: rgb(99, 219, 193);
+  color: white;
+  font-weight: 600;
+}
+
+.game__score {
+  font-size: 1rem;
+  color: rgb(66, 65, 65);
+  font-weight: 600;
+}
+
+.player__score {
+  margin-bottom: 2rem;
+}
+
+.instruction_text {
+  font-size: 1.5rem;
+  color: rgb(66, 65, 65);
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1rem;
+}
+.select__label {
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  color: rgb(66, 65, 65);
+}
+.play__btn {
+  border-radius: 3px;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border: solid black 1px;
+  background-color: rgb(99, 219, 193);
+  color: white;
+}
